@@ -29,19 +29,19 @@
 #### Linux / macOS (bash/zsh)
 ```bash
 export GITHUB_TOKEN=<your_taken_copied_from_git>
-python3 fetch_ghsas_rest.py --out ./<your_output_folder_name> Ex:ghp_************************************
+python3 crogl_rest_udated.py --out ./<your_output_folder_name> Ex:ghp_************************************
 ```
 
 #### Windows (PowerShell)
 ```powershell
 $env:GITHUB_TOKEN="<your_taken_copied_from_git>"
-python crogl_rest.py --out ".\<your_output_folder_name>" Ex:ghp_************************************
+python crogl_rest_udated.py --out ".\<your_output_folder_name>" Ex:ghp_************************************
 ```
 
 #### Windows (CMD)
 ```cmd
 set GITHUB_TOKEN=<your_taken_copied_from_git>
-python crogl_rest.py --out .\<your_output_folder_name> Ex:ghp_************************************
+python crogl_rest_udated.py --out .\<your_output_folder_name> Ex:ghp_************************************
 ```
 
 ### Output
@@ -68,7 +68,7 @@ This script maps **`medium → moderate`** and **`unknown → low`** to produce 
 ## Usage & Options
 
 ```
-python crogl_rest.py --out <DIR> [options]
+python crogl_rest_udated.py --out <DIR> [options]
 ```
 
 **Required**
@@ -98,19 +98,19 @@ python crogl_rest.py --out <DIR> [options]
 Only **high/critical** advisories, newest first:
 ```bash
 export GITHUB_TOKEN=ghp_...
-python3 crogl_rest.py.py --out ./export_high_critical \
+python3 crogl_rest_udated.py --out ./export_high_critical \
   --severity high,critical --sort updated --direction desc
 ```
 
 Only **npm** ecosystem:
 ```bash
 export GITHUB_TOKEN=ghp_...
-python3 crogl_rest.py.py --out ./export_npm --ecosystem npm
+python3 crogl_rest_udated.py --out ./export_npm --ecosystem npm
 ```
 
 GitHub Enterprise Server (GHES):
 ```bash
-python3 crogl_rest.py.py --out ./export_ghes \
+python3 crogl_rest_udated.py --out ./export_ghes \
   --api-base https://github.company.com/api/v3 \
   --token ghp_...
 ```
@@ -118,7 +118,7 @@ python3 crogl_rest.py.py --out ./export_ghes \
 Throttle requests (helpful behind corporate networks / CI):
 ```bash
 export GHSARL_MIN_INTERVAL=0.5
-python3 crogl_rest.py.py --out ./export
+python3 crogl_rest_udated.py --out ./export
 ```
 
 ---
